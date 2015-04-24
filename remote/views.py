@@ -8,8 +8,6 @@ def player(request):
     file_path = request.GET["file"]
     subtitles_path = request.GET.get("subtitles", "")
     
-    os.chdir(file_path)
-    
     cmd = "omxplayer {}".format(file_path)
     
     if subtitles_path:
