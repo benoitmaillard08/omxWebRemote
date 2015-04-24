@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.shortcuts import render, HttpResponse, HttpResponseRedirect, get_object_or_404
 import os
+import omx_api
 
 # Create your views here.
 def player(request):
@@ -8,12 +9,7 @@ def player(request):
     file_path = request.GET["file"]
     subtitles_path = request.GET.get("subtitles", "")
     
-    cmd = "omxplayer {}".format(file_path)
-    
-    if subtitles_path:
-        cmd += "--subtitles {}".format(subtitles_path)
-        
-    os.system(cmd)
+    omx_api.launch(file_path, subtitles_path)
     
     return render(request, "remote/main.html", {"file" : file_path})
     
