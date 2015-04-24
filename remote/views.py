@@ -17,7 +17,10 @@ def launch(request):
     return HttpResponse("---")
     
 def pause(request):
-    return HttpResponse("---")
+    
+    api.pause()
+    
+    return HttpResponse("00")
     
 def play(request):
     return HttpResponse("---")

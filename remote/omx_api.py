@@ -16,3 +16,6 @@ def launch(file_path, subtitles_path):
     time.sleep(5)
     
     child.sendline("q")
+    
+def pause():
+    child.sendline("p")
