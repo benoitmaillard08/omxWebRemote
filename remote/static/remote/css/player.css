@@ -1,0 +1,10 @@
+body {
+    background: #1b2024;
+    text-align: center ;
+}
+
+.remote-button {
+    outline:none;
+    width:30%;
+    margin:5px;
+}
