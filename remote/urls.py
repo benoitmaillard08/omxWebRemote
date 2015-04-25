@@ -7,7 +7,5 @@ urlpatterns = [
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^player/', player, name="player"),
-    url(r'^launch/', launch, name="launch"),
-    url(r'^pause/', pause, name="pause"),
-    url(r'^play/', play, name="play"),
+    url(r'^ajax-remote/', ajax_remote, name="ajax-remote"),
 ]

@@ -13,9 +13,5 @@ def launch(file_path, subtitles_path):
     
     child = pexpect.spawn(cmd)
     
-    time.sleep(5)
-    
-    child.sendline("q")
-    
-def pause():
-    child.sendline("p")
+def key_remote(key):
+    child.sendline(key)

@@ -13,15 +13,12 @@ def player(request):
     
     return render(request, "remote/main.html", {"file" : file_path})
     
-def launch(request):
-    return HttpResponse("---")
+def ajax_remote(request):
     
-def pause(request):
+    key = request.GET["key"]
     
-    api.pause()
+    api.key_remote(key)
+    
+    print("KEY PRESS : {}".format(key))
     
     return HttpResponse("00")
-    
-def play(request):
-    return HttpResponse("---")
-    

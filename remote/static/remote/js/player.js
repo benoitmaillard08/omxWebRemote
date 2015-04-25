@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#play-pause").click(
-        $.get(pause_url)
-    );
+    $(".remote-button").click(function() {
+        $.get(ajax_url, {"key" : $(this).attr("data-key")});
+    });
 });
