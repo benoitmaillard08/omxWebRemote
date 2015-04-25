@@ -10,16 +10,16 @@
         <script src="{% static 'remote/js/player.js' %}"></script>
     </head>
     <body>
-        <input type="image" class="remote-button" src="{% static 'remote/images/back.jpg' %}"  />
+        <input type="image" class="remote-button" data-key="$'\x1b\x5b\x44'" src="{% static 'remote/images/back.jpg' %}"  />
         <input type="image" class="remote-button on-play" data-key="p" src="{% static 'remote/images/play.jpg' %}"  />
-        <input type="image" class="remote-button" src="{% static 'remote/images/forward.jpg' %}"  />
+        <input type="image" class="remote-button" data-key="$'\x1b\x5b\x43'" src="{% static 'remote/images/forward.jpg' %}"  />
         <br>
-        <input type="image" class="remote-button" src="{% static 'remote/images/previous.jpg' %}"  />
-        <input type="image" class="remote-button" src="{% static 'remote/images/stop.jpg' %}"  />
-        <input type="image" class="remote-button" src="{% static 'remote/images/next.jpg' %}"  />
+        <input type="image" class="remote-button" data-key="i" src="{% static 'remote/images/previous.jpg' %}"  />
+        <input type="image" class="remote-button" data-key="q" src="{% static 'remote/images/stop.jpg' %}"  />
+        <input type="image" class="remote-button" data-key="o" src="{% static 'remote/images/next.jpg' %}"  />
         <br>
-        <input type="image" class="remote-button" src="{% static 'remote/images/mute.jpg' %}"  />
-        <input type="image" class="remote-button" src="{% static 'remote/images/volmin.jpg' %}"  />
-        <input type="image" class="remote-button" src="{% static 'remote/images/volplus.jpg' %}"  />
+        <input type="image" class="remote-button" data-key="p" src="{% static 'remote/images/mute.jpg' %}"  />
+        <input type="image" class="remote-button" data-key="-" src="{% static 'remote/images/volmin.jpg' %}"  />
+        <input type="image" class="remote-button" data-key="+" src="{% static 'remote/images/volplus.jpg' %}"  />
     </body>
 </html>
