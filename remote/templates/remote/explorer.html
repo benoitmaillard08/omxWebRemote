@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <link rel="stylesheet" href="{% static 'remote/css/explorer.css' %}" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    </head>
+    <body>
+        <h1>{{ directory.path }}</h1>
+            <ul>
+            {% for element in directory.l_elements %}
+                    {% if element.is_folder %}
+                        <li><a href="{% url 'remote:explorer' element.element_path %}">{{ element.name }}</a></li>
+                    {% elif element.can_be_played %}
+                        <li><a href="{% url 'remote:display' element.element_path %}">{{ element.name }}</a></li>
+                    {% else %}
+                        <li>{{ element.name }}</li>
+                    {% endif %}
+            {% endfor %}
+            </ul>
+    </body>
+</html>

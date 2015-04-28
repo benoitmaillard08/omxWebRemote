@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.shortcuts import render, HttpResponse, HttpResponseRedirect, get_object_or_404
 import os
 import remote.omx_api as api
+import remote.explorer as exp
 
 # Create your views here.
 def player(request):
@@ -22,3 +23,16 @@ def ajax_remote(request):
     print("KEY PRESS : {}".format(key))
     
     return HttpResponse("00")
+    
+def explorer(request, path):
+    
+    print(path)
+    directory = exp.Directory(path)
+    
+    return render(request, "remote/explorer.html", {"directory" : directory})
+    
+def display(request, path):
+    
+    display = exp.Display(path)
+    
+    return render(request, "remote/display.html", {"display" : display})

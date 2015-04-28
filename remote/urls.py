@@ -8,4 +8,6 @@ urlpatterns = [
 
     url(r'^player/', player, name="player"),
     url(r'^ajax-remote/', ajax_remote, name="ajax-remote"),
+    url(r'^explorer(.*)$', explorer, name="explorer"),
+    url(r'^display(.*)$', display, name="display"),
 ]
