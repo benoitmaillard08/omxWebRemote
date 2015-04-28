@@ -25,7 +25,7 @@ class DirectoryElement:
         try:
             os.chdir(name)
         
-        except NotADirectoryError: # In case the element is a file
+        except: # In case the element is a file
             self.is_folder = False
             
             if name.split(".")[-1] in VIDEO_EXTENSIONS:

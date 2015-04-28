@@ -4,7 +4,7 @@ import time
 child = None
 
 def launch(file_path, subtitles_path):
-    cmd = "omxplayer {} -b ".format(file_path)
+    cmd = "omxplayer {} -b -o local".format(file_path)
     
     if subtitles_path:
         cmd += "--subtitles {}".format(subtitles_path)
