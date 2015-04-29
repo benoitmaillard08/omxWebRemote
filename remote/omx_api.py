@@ -11,6 +11,8 @@ def launch(file_path, subtitles_path):
         
     global child
     
+    print(cmd)
+    
     child = pexpect.spawn(cmd)
     
 def key_remote(key):

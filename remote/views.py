@@ -10,6 +10,9 @@ def player(request):
     file_path = request.GET["file"]
     subtitles_path = request.GET.get("subtitles", "")
     
+    print(file_path)
+    print(subtitles_path)
+    
     api.launch(file_path, subtitles_path)
     
     return render(request, "remote/main.html", {"file" : file_path})
